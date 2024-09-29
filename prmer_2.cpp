@@ -5,6 +5,7 @@ int main(int argc, char *argv[]){
   int res = 1;
   tick = omp_get_wtick();
   start_time = omp_get_wtime();
+  #pragma omp for
   {for (int i = 1; i <= 10; i++)
       res *= i;
     printf("Factorial of ten: %d\n", res);}
